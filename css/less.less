@@ -1,0 +1,197 @@
+/*****
+	LESS
+*****/
+@import "preboot.less";
+@brandColor: #fff;
+@siteWidth: 1170px;
+
+/*****
+	HTML5 CSS RESET
+*****/
+html,body,div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,abbr,address,cite,code,del,dfn,em,img,ins,kbd,q,samp,small,strong,sub,sup,var,b,i,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,figcaption,figure,footer,header,hgroup,menu,nav,section,summary,time,mark,audio,video {margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent;}body {line-height:1;}article,aside,canvas,details,figcaption,figure,footer,header,hgroup,menu,nav,section,summary {display:block;}nav ul {list-style:none;}blockquote,q {quotes:none;}blockquote:before,blockquote:after,q:before,q:after {content:'';content:none;}a {margin:0;padding:0;border:0;font-size:100%;vertical-align:baseline;background:transparent;}ins {background-color:#ff9;color:#000;text-decoration:none;}mark {background-color:#ff9;color:#000;font-style:italic;font-weight:bold;}del {text-decoration: line-through;}abbr[title],dfn[title] {border-bottom:1px dotted #000;cursor:help;}table {border-collapse:collapse;border-spacing:0;}hr {display:block;height:1px;border:0;border-top:1px solid #cccccc;margin:1em 0;padding:0;}input,select {vertical-align:middle;}* {outline: none;} .clear {clear: both;}
+
+body {
+    font-family: 'Asap', sans-serif;
+}
+
+
+/*****
+	LAYOUT
+*****/
+.wrapper													{.container;
+	.left, .right											{width: @siteWidth / 2;}
+	.left													{float: left;}
+	.right													{float: right;}
+}
+footer														{clear: both;}
+
+
+/*****
+	GENERAL STYLING
+*****/
+a															{
+	&:link, &:visited										{color: @brandColor;}
+	&:hover, &:active, &:focus								{color: darken(@brandColor, 20);}
+}
+em, i 														{font-style: italic;}
+strong, b 													{font-weight: bold;}
+
+.navbar-default {
+    background: rgba(0,0,0,0.4);
+    border: none;
+}
+
+.navbar-brand {
+    padding-top: 14px;
+    padding-bottom: 14px;
+}
+
+.navbar-default .navbar-brand {
+    font-size: 32px;
+    font-weight: 500;
+    color: @white;
+    text-transform: uppercase;
+    &:hover {
+        color: @roundbg;
+    }
+}
+
+.navbar-default .navbar-nav > li > a {
+    color: @white;
+    text-transform: uppercase;
+    &:hover {
+        color: @roundbg;
+    }
+    &:focus {
+        color: @roundbg;
+    }
+}
+
+.navbar-default .navbar-toggle {
+    color: @roundbg;
+}
+
+header {
+    background-image: url('../images/header-bg.jpg');
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-position: center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+    text-align: center;
+    height: 100vh;
+        .container {
+            height: 100vh;
+                .intro-text {
+                    position: relative;
+                    top: 49%;
+                        .inputbox {
+                            background: @white;
+                            border: 1px solid @white;
+                            height: 60px;
+                            width: 90%;
+                            margin: 0 auto;
+                            border-radius: 40px;
+                            padding: 10px 20px;
+                        }
+                    
+                        button {
+                            background: @roundbg;
+                            border: 1px solid @roundbg;
+                            color: @white;
+                            font-weight: 500;
+                            height: 60px;
+                            border-radius: 40px;
+                            padding: 10px 50px;
+                            margin-top: 15px;
+                                &:hover {
+                                    background: @footerbg;
+                                    color: @white;
+                                    border: 1px solid @footerbg;
+                                }
+                        }
+                }
+        }
+}
+
+
+
+section {
+  padding: 50px 0;
+}
+
+section h2.section-heading {
+  font-size: 30px;
+  margin-top: 0;
+  margin-bottom: 30px;
+    text-transform: uppercase;
+}
+
+.text-primary {
+    color: @roundbg;
+}
+
+footer {
+    background: @footerbg;
+    color: @white;
+    font-size: 15px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+footer .social-buttons {
+    text-align: right;
+}
+
+@media (min-width: 768px) {
+    section {
+        padding: 80px 0;
+    }
+    
+    header {
+        background-image: url('../images/header-bg.jpg');
+        background-repeat: no-repeat;
+        background-attachment: scroll;
+        background-position: center center;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        background-size: cover;
+        -o-background-size: cover;
+        text-align: center;
+        height: 100vh;
+            .container {
+                height: 100vh;
+                    .intro-text {
+                        position: relative;
+                        top: 49%;
+                            .inputbox {
+                                background: @white;
+                                border: 1px solid @white;
+                                height: 60px;
+                                width: 370px;
+                                border-radius: 40px;
+                                padding: 10px 20px;
+                            }
+
+                            button {
+                                background: @roundbg;
+                                border: 1px solid @roundbg;
+                                color: @white;
+                                font-weight: 500;
+                                height: 60px;
+                                border-radius: 40px;
+                                padding: 10px 50px;
+                                margin-top: 0;
+                                    &:hover {
+                                        background: @footerbg;
+                                        color: @white;
+                                        border: 1px solid @footerbg;
+                                    }
+                            }
+                    }
+            }
+    }
+    
+}
